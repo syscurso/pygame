@@ -55,6 +55,13 @@ def main():
             print(score)
         else:
             snake_body.pop()
+        
+        head = snake_body[-1]
+        for i in range(len(snake_body) - 1): 
+            part = snake_body[i]
+            if head[0] == part[0] and head[1] == part[1]:
+                run = False
+                print("YOU LOSE")
 
         play_surface.fill((0,0,0))
 
